@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 Portfolio Builder</h1>
+            <p>Create your beautiful portfolio in seconds</p>
+        </header>
+
+        <main>
+            <div class="form-section">
+                <h2>Create Your Portfolio</h2>
+                
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" placeholder="Your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="title">Professional Title</label>
+                    <input type="text" id="title" placeholder="e.g., Web Developer, Designer">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">About You *</label>
+                    <textarea id="description" placeholder="Write a brief description about yourself" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="your@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone (optional)</label>
+                    <input type="tel" id="phone" placeholder="Your phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="photo">Upload Photo *</label>
+                    <input type="file" id="photo" accept="image/*" required>
+                    <small>Recommended: Square image (400x400px or larger)</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="website">Website/Portfolio URL (optional)</label>
+                    <input type="url" id="website" placeholder="https://yourwebsite.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="linkedin">LinkedIn (optional)</label>
+                    <input type="url" id="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+                </div>
+
+                <div class="button-group">
+                    <button onclick="previewPortfolio()" class="btn btn-primary">👁️ Preview</button>
+                    <button onclick="downloadPortfolio()" class="btn btn-success">⬇️ Download PDF</button>
+                    <button onclick="resetForm()" class="btn btn-secondary">🔄 Clear</button>
+                </div>
+            </div>
+
+            <div class="preview-section" id="previewSection" style="display:none;">
+                <h2>Portfolio Preview</h2>
+                <div id="portfolioPreview" class="portfolio-preview"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2024 Portfolio Builder | No Watermark | Free & Easy</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
